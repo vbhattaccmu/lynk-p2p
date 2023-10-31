@@ -12,7 +12,8 @@ The Lynk network implementation utilizes four protocols from the libp2p library,
 
 **5. Hole Punching**: The crate comes with hole punching enabled for symmetric NATs via AutoNat, Dcutr and Circuit relay over TCP (WIP) .
 
-### Upcoming Tasks 
+### Upcoming Tasks
+
 - [ ] Implement circuit relay logic for events in the swarm controller
 - [ ] Add quic in the swarm controller
 - [ ] Implement Kadmelia Indexer
