@@ -1,5 +1,6 @@
 mod behaviour;
 mod config;
+mod entrypoint;
 mod messages;
 mod network;
 mod peer;

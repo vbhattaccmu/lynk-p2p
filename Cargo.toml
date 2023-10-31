@@ -13,7 +13,7 @@ async-trait = "0.1"
 base64url = "0.1.0"
 ed25519-dalek = "1.0.1"
 futures = "0.3.21"
-libp2p = { version = "0.52.1", features = ["dns", "gossipsub", "identify", "ping", "tcp", "kad", "noise", "yamux", "macros", "tokio"]}
+libp2p = { version = "0.52.3", features = ["kad", "identify", "ping", "tcp", "mdns", "gossipsub", "autonat", "relay", "dcutr", "noise", "yamux", "dns", "metrics", "tokio", "macros", "quic", "serde"] }
 log = "0.4"
 tokio = { version = "1", features = ["rt-multi-thread", "sync", "macros"] }
 rand = "0.8.5"

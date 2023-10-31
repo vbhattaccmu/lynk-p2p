@@ -1,7 +1,10 @@
 use std::net::Ipv4Addr;
 
-use libp2p::{PeerId, identity::{ed25519, PublicKey}};
 use crate::PublicAddress;
+use libp2p::{
+    identity::{ed25519, PublicKey},
+    PeerId,
+};
 
 /// Peer consists of required information to identify an entity in the network, such as
 /// Peer Id, IPv4 Address and port number.

@@ -15,7 +15,7 @@
 use async_trait::async_trait;
 use libp2p::gossipsub::IdentTopic;
 
-use crate::{PublicAddress, utilities};
+use crate::PublicAddress;
 
 /// The arbitrary user-defined data that is being transmitted within the network.
 pub type Message = Vec<u8>;

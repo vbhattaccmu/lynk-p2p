@@ -1,5 +1,5 @@
 use crate::peer::Peer;
-use libp2p::identity::{Keypair, ed25519};
+use libp2p::identity::{ed25519, Keypair};
 
 /// Configuration that specifies parameters such as network connection, node identification,
 /// message buffer sizes and interval.
@@ -13,22 +13,22 @@ use libp2p::identity::{Keypair, ed25519};
 /// - Interval for peer discover: 10 secs
 #[derive(Clone)]
 pub struct Config {
-    /// keypair used for identification of this network node
+    /// Keypair used for identification of this network node
     pub(crate) keypair: Keypair,
 
-    /// port number for TCP connection
+    /// Port number for TCP connection
     pub port: u16,
 
-    /// bootstrap peers for initial connection setup
+    /// Bootstrap peers for initial connection setup
     pub boot_nodes: Vec<Peer>,
 
-    /// buffer size of commands initiated from caller
+    /// Buffer size of commands initiated from caller
     pub send_command_buffer_size: usize,
 
-    /// buffer size of message that is sent to this network node.
+    /// Buffer size of message that is sent to this network node.
     pub private_msg_buffer_size: usize,
 
-    /// buffer size of broadcast messages.
+    /// Buffer size of broadcast messages.
     pub broadcast_msg_buffer_size: usize,
 
     /// Interval in seconds for querying networking to discover peers.
@@ -53,7 +53,9 @@ impl Config {
     /// Create config with an existing keypair.
     pub fn new_with_keypair(mut keypair_bytes: Vec<u8>) -> Self {
         Self {
-            keypair: ed25519::Keypair::try_from_bytes(&mut keypair_bytes).expect("Invalid ed25519 keypair").into(),
+            keypair: ed25519::Keypair::try_from_bytes(&mut keypair_bytes)
+                .expect("Invalid ed25519 keypair")
+                .into(),
             port: 25519,
             boot_nodes: Vec::new(),
             send_command_buffer_size: 8,

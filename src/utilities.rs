@@ -8,7 +8,7 @@ use crate::PublicAddress;
 pub fn public_address(public_key: &PublicKey) -> Option<PublicAddress> {
     match public_key.clone().try_into_ed25519() {
         Ok(kp) => Some(kp.to_bytes()),
-        _=> None
+        _ => None,
     }
 }
 
