@@ -1,3 +1,6 @@
+> [!WARNING]
+> This repository is Work Under Progress.
+
 #### Lynk: A Generalized Libp2p Network
 
 The Lynk network implementation utilizes four protocols from the libp2p library, operating on top of a TCP transport secured with Noise authentication. These protocols are:
