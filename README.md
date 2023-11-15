@@ -19,6 +19,6 @@ The Lynk network implementation utilizes four protocols from the libp2p library,
 
 - [ ] Implement circuit relay logic for events in swarm controller
 - [ ] Add quic in the transport layer
-- [ ] Implement Kadmelia Indexer
+- [ ] Implement Kademlia Indexer
 - [ ] Add tests
 - [ ] Cleanup code
