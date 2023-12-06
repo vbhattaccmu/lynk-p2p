@@ -105,9 +105,7 @@ impl PeerNetworkBehaviour {
             auto_nat: AutoNat::new(local_peer_id, autonat_cfg),
         }
     }
-}
 
-impl PeerNetworkBehaviour {
     /// Add address to DHT
     pub fn add_address(&mut self, peer: &PeerId, address: Multiaddr) {
         self.kad.add_address(peer, address);
