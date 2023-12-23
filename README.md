@@ -1,5 +1,6 @@
 > [!WARNING]
 > This repository is Work Under Progress.
+> Credits will be cited after pending tasks are complete.
 
 #### Lynk: A Generalized Libp2p Network
 
